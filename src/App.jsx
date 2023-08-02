@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Login from './pages/Login'
+import Login from './pages/login'
 import Dashboard from './pages/Dashboard'
-import Users from './pages/Users'
+import Users from './pages/users'
 
 const App = () => {
   return (

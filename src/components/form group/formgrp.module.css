@@ -1,0 +1,36 @@
+.form-group {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+input {
+    width: 100%;
+    padding: 4%;
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.2em;
+}
+
+.form-group label {
+    position: absolute;
+    left: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-out;
+    pointer-events: none;
+    opacity: 0;
+}
+
+input:is(:focus, :active)+label,
+input:not(:placeholder-shown)+label {
+    top: 0;
+    font-size: 0.8em;
+    background-color: white;
+    padding: 0 1%;
+    opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .form-group {
+        margin-bottom: 1.5em;
+    }
+}

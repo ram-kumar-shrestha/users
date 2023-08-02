@@ -1,0 +1,82 @@
+.login-container {
+    --login-form-size: 80dvh;
+    background-color: #fff;
+    width: 80dvw;
+    height: var(--login-form-size);
+    margin: calc((100dvh - var(--login-form-size))/2) auto;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    gap: 3%;
+}
+
+
+.image-container {
+    width: 50%;
+    height: 40%;
+}
+
+.image-container img {
+    width: 100%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.image-caption {
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.login-form {
+    width: 95%;
+    text-align: left;
+    border: 0.1em solid var(--highlight-color);
+    padding: 5%;
+    border-radius: 0.5em;
+}
+
+.form-title {
+    display: none;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0.2em;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 3% 10%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.btn:is(:hover, :active, :focus) {
+    background-color: var(--secondary-color);
+    color: #434343;
+}
+
+@media screen and (min-width: 768px) {
+    .login-container {
+        flex-direction: row-reverse;
+        width: 60%;
+    }
+
+    .login-form {
+        width: 65%;
+        height: 90%;
+    }
+
+    .form-title {
+        display: block;
+        margin-bottom: 1em;
+    }
+
+    .image-container {
+        width: 30%;
+        height: 100%;
+    }
+}
