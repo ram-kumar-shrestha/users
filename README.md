@@ -1,4 +1,4 @@
-````
+
 # Users Repository
 
 This repository contains a simple React application that displays a data table of users. Users can be filtered based on their name, email, role, and phone number upon the login.
