@@ -1,0 +1,31 @@
+.container {
+    background-color: var(--font-color);
+    border-radius: 0.5em;
+    padding: 5%;
+}
+
+.container table {
+    margin: 1em auto;
+    border-radius: 0.2em;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.container :is(th, td) {
+    border: 0.1em solid #111;
+    padding: 2% 1%;
+}
+
+.container td {
+    font-size: 0.7em;
+}
+
+.container td:nth-child(2) {
+    word-break: break-all;
+}
+
+@media (min-width: 768px) {
+    .container td {
+        font-size: 1em;
+    }
+}

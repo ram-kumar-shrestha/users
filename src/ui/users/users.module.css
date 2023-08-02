@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+    display: flex;
+    gap: 2%;
+}
+
+.container input {
+    padding: 2%;
+    font-size: 1em;
+}
+
+.container select {
+    width: 20%;
+    padding: 1%;
+}
+
+.container option {
+    font-size: 1.1em;
+}

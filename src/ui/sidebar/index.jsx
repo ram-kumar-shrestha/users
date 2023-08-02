@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./sidebar.module.css";
-import NavItem from "../../components/nav item";
 import { ArrowLeft, ArrowRight } from "feather-icons-react/build/IconComponents";
 import Button from "../../components/btn";
 import Navigation from "./Navigation";
@@ -26,7 +25,7 @@ const Sidebar = () => {
             <aside className={`${styles.sidebar} ${sidebarOpen ? styles.open : ""}`}>
                 <h1 className={styles['menu-name']}>Users Dashboard</h1>
 
-                <Navigation />
+                <Navigation handleToggleSidebar />
 
                 <div className={styles.actions}>
                     <Button
