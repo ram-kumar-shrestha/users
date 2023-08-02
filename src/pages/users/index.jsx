@@ -6,7 +6,6 @@ import styles from './users.module.css'
 const Users = () => {
     const [users, setUsers] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
-    const [filterRole, setFilterRole] = useState('');
 
     useEffect(() => {
         fetchUsers();
@@ -28,9 +27,8 @@ const Users = () => {
 
 
     const filteredUsers = users.filter((user) => {
-        const roleMatch = filterRole ? user.role === filterRole : true;
         const searchTerms = Object.values(user).join(' ').toLowerCase();
-        return roleMatch && searchTerms.includes(searchQuery.toLowerCase());
+        return searchTerms.includes(searchQuery.toLowerCase());
     });
 
     const uniqueRoles = [...new Set(users.map((user) => user.role))];
